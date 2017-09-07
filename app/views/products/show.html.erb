@@ -2,8 +2,28 @@
 
 <%= render "product_description", product: @product%>
 
+<h2>Comments</h2>
+<ul>
+  <% @product.reviews.all.each do |review| %>
+    <li>
+      <p>
+        On <%= review.created_at.to_formatted_s(:long) %>, someone said:
+      </p>
+      <p><%= review.comment %></p>
+
+    </li>
+  <% end  %>
+</ul>
+
+
 
 <%= link_to "Edit listing", edit_product_path %>
 <%= link_to "Delete listing", product_path(@product), method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <%= link_to "Back to listings", products_path %>
+
+
+<!--
+Add code to the product show page to display a list of all the reviews associated with that product, including the review's comment and the time it was written (hint: consult db/schema.rb to verify the name of the column that contains this information).
+
+Don't forget to commit and swap which partner is typing. -->
