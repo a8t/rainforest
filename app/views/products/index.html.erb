@@ -1,15 +1,3 @@
-<!-- At this point you should have an empty index.html.erb view and an empty index method in your ProductsController. You should also have a get '/products' route that's hooked up to that controller method. If you visit localhost:3000/products you should see a blank page, but no error.
-
-Using the user stories above to guide your decisions about what should appear on this page, fill in the index erb file. What data/instance variables do you need in order to finish this view? Fill in the index controller method so that it sets up those variables for you. As always, don't hesitate to ask an instructor for guidance if you're not sure what to do here. :)
-
-Once you get to the point where your seed data is displayed when you go to localhost:3000/products, commit and swap which partner is in charge of typing for the next task. -->
-
-<!-- 1)On the homepage I am presented with a list of all the products and a link to create a new product. a. Each product in the list is displayed with its name, description, and price, and has a link to go to its show page. -->
-<!-- 2)If I click to create a new product I am taken to a page with a form. Submitting this form, which has three fields (name, description, and price in cents) takes me to the show page for the new product.
-3)On the homepage if I click a product I am taken to a page with b. its name, description, and price. a. two buttons: one to edit and the other to delete the product.
-4) If I go to the product show page I am presented with a list of reviews about the product. Each review includes the text of the review and the date and time at which it was written. The page also has a form with one text field I can fill in and submit to create a new review for the product.
-5) Next to each review on the product show page I should see a link to delete the review and a link to go to a form that allows me to edit the review. -->
-
 <h1>Products</h1>
 
 <%= link_to "New Product", new_product_path %>

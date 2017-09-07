@@ -4,8 +4,6 @@
 
 
 <%= link_to "Edit listing", edit_product_path %>
-<%= link_to "Delete listing", product_path(@product),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
+<%= link_to "Delete listing", product_path(@product), method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <%= link_to "Back to listings", products_path %>

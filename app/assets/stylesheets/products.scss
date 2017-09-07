@@ -9,8 +9,9 @@
 nav {
   display: flex;
   flex-direction: row;
-  align-items: right;
-  background-color: #ccc;
+  justify-content: right;
+  background-color: darkgrey;
+  padding: 5px;
 
   * {
     color: white;
