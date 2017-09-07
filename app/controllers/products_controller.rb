@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
 
 
     if @product.save
-      redirect_to @product
+      redirect_to product_path(@product)
       flash[:notice] = "Product created!"
     else
       render 'new'
@@ -26,6 +26,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     product = @product
+    @review = Review.new
   end
 
   def edit
@@ -41,7 +42,7 @@ class ProductsController < ApplicationController
 
 
     if @product.save
-      redirect_to @product
+      redirect_to product_path(@product)
       flash[:notice] = "Product updated!"
     else
       render 'edit'

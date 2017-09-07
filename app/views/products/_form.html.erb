@@ -16,15 +16,15 @@
 
   <p>
     <%= f.label :name %> <br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :required => true  %>
   </p>
   <p>
     <%= f.label :description %> <br>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, :required => true  %>
   </p>
   <p>
     <%= f.label :price_in_cents %> <br>
-    <%= f.text_field :price_in_cents %>
+    <%= f.text_field :price_in_cents, :required => true  %>
   </p>
   <p>
     <%= f.submit "Save" %>

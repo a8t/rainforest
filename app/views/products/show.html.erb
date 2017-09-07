@@ -10,11 +10,20 @@
         On <%= review.created_at.to_formatted_s(:long) %>, someone said:
       </p>
       <p><%= review.comment %></p>
+      <p>
+        <%= link_to "Edit Review", edit_product_review_path(@product, review)%>
+      </p>
+      <p>
+        <%= link_to "Delete Review", product_review_path(@product, review), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
 
     </li>
   <% end  %>
 </ul>
 
+<h4>New Review</h4>
+
+<%= render "reviews/review_form", product: @product, review: @review %>
 
 
 <%= link_to "Edit listing", edit_product_path %>
